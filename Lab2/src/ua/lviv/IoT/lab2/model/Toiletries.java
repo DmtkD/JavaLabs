@@ -1,13 +1,13 @@
-package ua.lviv.IoT.lab2.chemicals;
+package ua.lviv.IoT.lab2.model;
 
-public class Toiletries extends Chemicals{
+public class Toiletries extends Chemicals {
 
    private double efficiency;
    private int durationOfActionPerDay;
 
-   public Toiletries (double price, double volume, String company,
-                      double efficiency, int durationOfActionPerDay) {
-      super(price, volume, company);
+   public Toiletries(double price, double volume, String company, boolean forCleaning,
+                     double efficiency, int durationOfActionPerDay) {
+      super(price, volume, company, forCleaning);
       this.efficiency = efficiency;
       this.durationOfActionPerDay = durationOfActionPerDay;
    }
@@ -30,12 +30,6 @@ public class Toiletries extends Chemicals{
 
    @Override
    public String toString() {
-      return "Toiletries{" +
-              "price=" + price +
-              ", volume=" + volume +
-              ", company='" + company + '\'' +
-              ", efficiency=" + efficiency +
-              ", durationOfActionPerDay=" + durationOfActionPerDay +
-              '}';
+      return "Toiletries";
    }
 }

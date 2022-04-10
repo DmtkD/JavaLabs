@@ -1,12 +1,12 @@
-package ua.lviv.IoT.lab2.chemicals;
+package ua.lviv.IoT.lab2.model;
 
-public class Kitchens extends Chemicals{
+public class Kitchens extends Chemicals {
 
    private int washingTemperature;
    private boolean flow;
 
-   public Kitchens(double price, double volume, String company, int washingTemperature, boolean flow) {
-      super(price, volume, company);
+   public Kitchens(double price, double volume, String company, boolean forCleaning, int washingTemperature, boolean flow) {
+      super(price, volume, company, forCleaning);
       this.washingTemperature = washingTemperature;
       this.flow = flow;
    }
@@ -29,12 +29,6 @@ public class Kitchens extends Chemicals{
 
    @Override
    public String toString() {
-      return "Kitchens{" +
-              "price=" + price +
-              ", volume=" + volume +
-              ", company='" + company + '\'' +
-              ", washingTemperature=" + washingTemperature +
-              ", flow=" + flow +
-              '}';
+      return "Kitchens";
    }
 }

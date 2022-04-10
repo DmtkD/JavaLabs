@@ -1,19 +1,30 @@
 package ua.lviv.IoT.lab2;
 
-import ua.lviv.IoT.lab2.chemicals.Detergents;
-import ua.lviv.IoT.lab2.chemicals.Kitchens;
-import ua.lviv.IoT.lab2.chemicals.Toiletries;
+import ua.lviv.IoT.lab2.manager.impl.StoreManager;
+import ua.lviv.IoT.lab2.model.Chemicals;
+import ua.lviv.IoT.lab2.model.Detergents;
+import ua.lviv.IoT.lab2.model.Kitchens;
+import ua.lviv.IoT.lab2.model.Toiletries;
 
 public class Main {
 
-    public static void main (String [] arg){
+   public static void main(String[] args) {
 
-        Detergents example1 = new Detergents(100, 500, "Samsung", 7.5, true);
-        Toiletries example2 = new Toiletries(50, 1000, "Xiaomi", 85, 10);
-        Kitchens example3 = new Kitchens(25, 1500, "Apple", 27, false);
+      Chemicals example1 = new Detergents(100, 500, "Samsung",
+              true, 7.5, true);
+      Chemicals example2 = new Toiletries(50, 1000, "Xiaomi",
+              false, 85, 10);
+      Chemicals example3 = new Kitchens(25, 1500, "Apple",
+              true, 27, false);
 
-        System.out.println(example1);
-        System.out.println(example2);
-        System.out.println(example3);
-    }
+      StoreManager store = new StoreManager();
+
+      store.addGoods(example1);
+      store.addGoods(example2);
+      store.addGoods(example3);
+
+      System.out.println(store.sortByCompany(true));
+      System.out.println(store.sortByPrice(false));
+      System.out.println(store.findChemicalsForCleaning());
+   }
 }
