@@ -20,18 +20,18 @@ public class StoreManager implements IStoreManager {
    @Override
    public List<Chemicals> sortByPrice(boolean reverse) {
       if (reverse) {
-         return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getPrice)).collect(Collectors.toList());
-      } else {
          return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getPrice).reversed()).collect(Collectors.toList());
+      } else {
+         return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getPrice)).collect(Collectors.toList());
       }
    }
 
    @Override
    public List<Chemicals> sortByCompany(boolean reverse) {
       if (reverse) {
-         return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getCompany)).collect(Collectors.toList());
-      } else {
          return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getCompany).reversed()).collect(Collectors.toList());
+      } else {
+         return listOfChemicals.stream().sorted(Comparator.comparing(Chemicals::getCompany)).collect(Collectors.toList());
       }
    }
 
