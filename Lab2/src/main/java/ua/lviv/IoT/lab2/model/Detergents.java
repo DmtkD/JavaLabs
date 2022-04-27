@@ -11,6 +11,17 @@ public class Detergents extends Chemicals {
       this.powder = powder;
    }
 
+
+   @Override
+   public String getHeader() {
+      return String.format("%s, %s, %s\n", super.getHeader(), "pHLevel", "powder");
+   }
+
+   @Override
+   public String toSVC() {
+      return String.format("%s, %s, %s\n", super.toSVC(), getPHLevel(), getPowder());
+   }
+
    public double getPHLevel() {
       return pHLevel;
    }

@@ -1,9 +1,11 @@
 package ua.lviv.IoT.lab2;
 
+import ua.lviv.IoT.lab2.manager.impl.ChemicalsWriter;
 import ua.lviv.IoT.lab2.manager.impl.StoreManager;
-import ua.lviv.IoT.lab2.model.Detergents;
-import ua.lviv.IoT.lab2.model.Kitchens;
-import ua.lviv.IoT.lab2.model.Toiletries;
+import ua.lviv.IoT.lab2.model.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -22,5 +24,9 @@ public class Main {
       System.out.println(store.sortByCompany(true));
       System.out.println(store.sortByPrice(false));
       System.out.println(store.findChemicalsForCleaning());
+
+      List<Chemicals> list = Arrays.asList(example1, example2, example3);
+      ChemicalsWriter writer = new ChemicalsWriter();
+      writer.writeToFile(list);
    }
 }

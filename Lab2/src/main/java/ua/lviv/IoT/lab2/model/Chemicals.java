@@ -14,6 +14,15 @@ public abstract class Chemicals {
       this.forCleaning = forCleaning;
    }
 
+
+   public String getHeader() {
+      return String.format("%s, %s, %s, %s", "price", "volume", "company", "forCleaning");
+   }
+
+   public String toSVC() {
+      return String.format("%s, %s, %s, %s", getPrice(), getVolume(), getCompany(), getForCleaning());
+   }
+
    public double getPrice() {
       return this.price;
    }

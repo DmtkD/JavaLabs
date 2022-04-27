@@ -12,6 +12,16 @@ public class Toiletries extends Chemicals {
       this.durationOfActionPerDay = durationOfActionPerDay;
    }
 
+   @Override
+   public String getHeader() {
+      return String.format("%s, %s, %s\n", super.getHeader(), "efficiency", "durationOfActionPerDay");
+   }
+
+   @Override
+   public String toSVC() {
+      return String.format("%s, %s, %s\n", super.toSVC(), getEfficiency(), getDurationOfActionPerDay());
+   }
+
    public double getEfficiency() {
       return efficiency;
    }

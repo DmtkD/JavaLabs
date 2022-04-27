@@ -27,8 +27,8 @@ class StoreManagerTest {
          privateField.setAccessible(true);
          var listTest = (List<Chemicals>)privateField.get(shop);
          assertEquals(obj1, listTest.get(listTest.size()-1));
-      } catch (Exception shop) {
-         shop.printStackTrace();
+      } catch (Exception e) {
+         e.printStackTrace();
       }
    }
 

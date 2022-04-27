@@ -11,6 +11,16 @@ public class Kitchens extends Chemicals {
       this.flow = flow;
    }
 
+   @Override
+   public String getHeader() {
+      return String.format("%s, %s, %s\n", super.getHeader(), "washingTemperature", "flow");
+   }
+
+   @Override
+   public String toSVC() {
+      return String.format("%s, %s, %s\n", super.toSVC(), getWashingTemperature(), getFlow());
+   }
+
    public int getWashingTemperature() {
       return washingTemperature;
    }

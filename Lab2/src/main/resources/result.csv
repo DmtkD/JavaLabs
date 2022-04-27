@@ -1,0 +1,6 @@
+price, volume, company, forCleaning, efficiency, durationOfActionPerDay
+100.0, 500.0, Canada, true, 7.5, 15
+price, volume, company, forCleaning, washingTemperature, flow
+200.0, 500.0, Apple, false, 25, true
+price, volume, company, forCleaning, pHLevel, powder
+500.0, 100.0, Dania, true, 7.5, true
