@@ -1,10 +1,10 @@
 package ua.lviv.IoT.lab2.manager.impl;
 
 import org.junit.jupiter.api.Test;
-import ua.lviv.IoT.lab2.model.Chemicals;
-import ua.lviv.IoT.lab2.model.Detergents;
-import ua.lviv.IoT.lab2.model.Kitchens;
-import ua.lviv.IoT.lab2.model.Toiletries;
+import ua.lviv.IoT.lab2.model.Chemical;
+import ua.lviv.IoT.lab2.model.Detergent;
+import ua.lviv.IoT.lab2.model.Kitchen;
+import ua.lviv.IoT.lab2.model.Toiletry;
 
 import java.io.*;
 import java.util.Arrays;
@@ -12,16 +12,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ChemicalsWriterTest {
+class ChemicalWriterTest {
 
-   private final Toiletries obj1 = new Toiletries(100, 500, "Canada", true, 7.5, 15);
-   private final Kitchens obj2 = new Kitchens(200, 500, "Apple", false, 25, true);
-   private final Detergents obj3 = new Detergents(500, 100, "Dania", true, 7.5, true);
+   private final Toiletry obj1 = new Toiletry(100, 500, "Canada", true, 7.5, 15);
+   private final Kitchen obj2 = new Kitchen(200, 500, "Apple", false, 25, true);
+   private final Detergent obj3 = new Detergent(500, 100, "Dania", true, 7.5, true);
 
    @Test
    void writeToFile() {
-      List<Chemicals> listTest = Arrays.asList(obj1, obj2, obj3);
-      ChemicalsWriter writer = new ChemicalsWriter();
+      List<Chemical> listTest = Arrays.asList(obj1, obj2, obj3);
+      ChemicalWriter writer = new ChemicalWriter();
       writer.writeToFile(listTest);
 
       String readerEx = String.format("%s%s%s%s%s", System.getProperty("user.dir"), File.separator, "src\\test\\resources", File.separator, "example.csv");
