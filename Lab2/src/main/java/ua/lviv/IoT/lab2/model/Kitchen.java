@@ -1,14 +1,24 @@
 package ua.lviv.IoT.lab2.model;
 
-public class Kitchens extends Chemicals {
+public class Kitchen extends Chemical {
 
    private int washingTemperature;
    private boolean flow;
 
-   public Kitchens(double price, double volume, String company, boolean forCleaning, int washingTemperature, boolean flow) {
+   public Kitchen(double price, double volume, String company, boolean forCleaning, int washingTemperature, boolean flow) {
       super(price, volume, company, forCleaning);
       this.washingTemperature = washingTemperature;
       this.flow = flow;
+   }
+
+   @Override
+   public String getHeader() {
+      return String.format("%s, %s, %s\n", super.getHeader(), "washingTemperature", "flow");
+   }
+
+   @Override
+   public String toCSV() {
+      return String.format("%s, %s, %s\n", super.toCSV(), getWashingTemperature(), getFlow());
    }
 
    public int getWashingTemperature() {
