@@ -6,7 +6,10 @@ import ua.lviv.IoT.lab2.model.Detergent;
 import ua.lviv.IoT.lab2.model.Kitchen;
 import ua.lviv.IoT.lab2.model.Toiletry;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 

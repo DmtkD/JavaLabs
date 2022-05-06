@@ -2,9 +2,14 @@ package ua.lviv.IoT.lab2;
 
 import ua.lviv.IoT.lab2.manager.impl.ChemicalWriter;
 import ua.lviv.IoT.lab2.manager.impl.StoreManager;
-import ua.lviv.IoT.lab2.model.*;
+import ua.lviv.IoT.lab2.model.Detergent;
+import ua.lviv.IoT.lab2.model.Kitchen;
+import ua.lviv.IoT.lab2.model.Toiletry;
+import ua.lviv.IoT.lab2.model.Chemical;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {

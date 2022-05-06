@@ -1,6 +1,5 @@
 package ua.lviv.IoT.lab2.manager.impl;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -18,8 +17,8 @@ class CheckWordTest {
       Set<String> expectationResult1 = new HashSet<>(Arrays.asList("i", "here", "and"));
       Set<String> expectationResult2 = new HashSet<>(List.of("here"));
       Set<String> expectationResult3 = new HashSet<>(Arrays.asList("here", "i"));
-      Assertions.assertEquals(expectationResult1, CheckWord.checkWord(testLine, 1));
-      Assertions.assertEquals(expectationResult2, CheckWord.checkWord(testLine, 2));
-      Assertions.assertNotEquals(expectationResult3, CheckWord.checkWord(testLine, 0));
+      assertEquals(expectationResult1, CheckWord.checkWord(testLine, 1));
+      assertEquals(expectationResult2, CheckWord.checkWord(testLine, 2));
+      assertNotEquals(expectationResult3, CheckWord.checkWord(testLine, 0));
    }
 }
