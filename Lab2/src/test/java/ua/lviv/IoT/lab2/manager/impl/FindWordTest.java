@@ -7,9 +7,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class CheckWordTest {
+
+class FindWordTest {
 
    @Test
    void checkWord() {
@@ -17,8 +19,8 @@ class CheckWordTest {
       Set<String> expectationResult1 = new HashSet<>(Arrays.asList("i", "here", "and"));
       Set<String> expectationResult2 = new HashSet<>(List.of("here"));
       Set<String> expectationResult3 = new HashSet<>(Arrays.asList("here", "i"));
-      assertEquals(expectationResult1, CheckWord.checkWord(testLine, 1));
-      assertEquals(expectationResult2, CheckWord.checkWord(testLine, 2));
-      assertNotEquals(expectationResult3, CheckWord.checkWord(testLine, 0));
+      assertEquals(expectationResult1, FindWord.findWordsThatMoreThanNTimes(testLine, 1));
+      assertEquals(expectationResult2, FindWord.findWordsThatMoreThanNTimes(testLine, 2));
+      assertNotEquals(expectationResult3, FindWord.findWordsThatMoreThanNTimes(testLine, 0));
    }
 }
