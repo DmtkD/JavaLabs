@@ -1,8 +1,12 @@
 package ua.lviv.IoT.lab2;
 
+import ua.lviv.IoT.lab2.manager.impl.FindWord;
 import ua.lviv.IoT.lab2.manager.impl.ChemicalWriter;
 import ua.lviv.IoT.lab2.manager.impl.StoreManager;
-import ua.lviv.IoT.lab2.model.*;
+import ua.lviv.IoT.lab2.model.Detergent;
+import ua.lviv.IoT.lab2.model.Kitchen;
+import ua.lviv.IoT.lab2.model.Toiletry;
+import ua.lviv.IoT.lab2.model.Chemical;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,5 +32,7 @@ public class Main {
       List<Chemical> list = Arrays.asList(example1, example2, example3);
       ChemicalWriter writer = new ChemicalWriter();
       writer.writeToFile(list);
+
+      System.out.println(FindWord.findWordsThatMoreThanNTimes("Hello I and  I go to Home and go to school", 1));
    }
 }
