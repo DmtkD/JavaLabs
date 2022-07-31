@@ -1,5 +1,5 @@
 # JavaLabs
-Repository for Java labs 2-7 on the course **«Internet of Things»** by Lviv Polytehnic National University
+Repository for Java labs 2-7 on the course **«Internet of Things»** in Lviv Polytehnic National University
 
 
 # The task was:
