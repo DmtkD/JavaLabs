@@ -41,5 +41,7 @@ You need to create a class - Manager that will contain logic (example for option
 Важливо: збірку проекту слід виконувати з консолі командою mvn clean package
 
 Згенерувати pom.xml можна з використанням команди maven _(слід виконувати з консолі)_:
-**mvn archetype:generate -DgroupId=ua.lviv.iot -DartifactId=work -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0 -DinteractiveMode=false**
+```
+mvn archetype:generate -DgroupId=ua.lviv.iot -DartifactId=work -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0 -DinteractiveMode=false
+```
 
